@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - StreetSmart Supply</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-bg {
+            background: linear-gradient(135deg, #f97316 0%, #ea580c 50%, #dc2626 100%);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- Header -->
+    <header class="bg-white shadow-sm border-b">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-orange-500 rounded-lg flex items-center justify-center">
+                        <span class="text-white font-bold text-lg">🛒</span>
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold text-gray-900">StreetSmart Supply</h1>
+                        <p class="text-xs text-gray-500">Street Food Vendors Ka Partner</p>
+                    </div>
+                </div>
+                
+                <!-- Navigation -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="home.html" class="text-gray-600 hover:text-orange-600 font-medium transition-colors">Home</a>
+                    <a href="suppilers.html" class="text-gray-600 hover:text-orange-600 font-medium transition-colors">Suppliers</a>
+                    <a href="group -orders.html" class="text-gray-600 hover:text-orange-600 font-medium transition-colors">Group Orders</a>
+                    <a href="login.html" class="text-orange-600 font-medium">Login</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-1 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-md w-full space-y-8">
+            <!-- Login Card -->
+            <div class="bg-white rounded-2xl shadow-xl p-8">
+                <!-- Header -->
+                <div class="text-center mb-8">
+                    <div class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-white font-bold text-2xl">🛒</span>
+                    </div>
+                    <h2 class="text-2xl font-bold text-gray-900 mb-2">Welcome Back!</h2>
+                    <p class="text-gray-600">Sign in to your StreetSmart Supply account</p>
+                </div>
+
+                <!-- Login Form -->
+                <form class="space-y-6" id="loginForm">
+                    <!-- Mobile Number -->
+                    <div>
+                        <label for="mobile" class="block text-sm font-medium text-gray-700 mb-2">
+                            Mobile Number
+                        </label>
+                        <div class="relative">
+                            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                <span class="text-gray-500 text-sm">+91</span>
+                            </div>
+                            <input 
+                                id="mobile" 
+                                name="mobile" 
+                                type="tel" 
+                                required 
+                                class="appearance-none relative block w-full pl-12 pr-3 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500 focus:z-10 sm:text-sm"
+                                placeholder="Enter your mobile number"
+                                maxlength="10"
+                                pattern="[0-9]{10}"
+                            >
+                        </div>
+                    </div>
+
+                    <!-- Password -->
+                    <div>
+                        <label for="password" class="block text-sm font-medium text-gray-700 mb-2">
+                            Password
+                        </label>
+                        <div class="relative">
+                            <input 
+                                id="password" 
+                                name="password" 
+                                type="password" 
+                                required 
+                                class="appearance-none relative block w-full px-3 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500 focus:z-10 sm:text-sm"
+                                placeholder="Enter your password"
+                            >
+                            <button 
+                                type="button" 
+                                class="absolute inset-y-0 right-0 pr-3 flex items-center"
+                                onclick="togglePassword()"
+                            >
+                                <span id="eyeIcon" class="text-gray-400 hover:text-gray-600">👁️</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Remember Me & Forgot Password -->
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center">
+                            <input 
+                                id="remember-me" 
+                                name="remember-me" 
+                                type="checkbox" 
+                                class="h-4 w-4 text-orange-600 focus:ring-orange-500 border-gray-300 rounded"
+                            >
+                            <label for="remember-me" class="ml-2 block text-sm text-gray-700">
+                                Remember me
+                            </label>
+                        </div>
+                        <div class="text-sm">
+                            <a href="#" class="font-medium text-orange-600 hover:text-orange-500" onclick="showForgotPassword()">
+                                Forgot password?
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Login Button -->
+                    <div>
+                        <button 
+                            type="submit" 
+                            class="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-lg text-white gradient-bg hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 transition-all duration-200"
+                        >
+                            <span class="absolute left-0 inset-y-0 flex items-center pl-3">
+                                <span class="text-orange-200 group-hover:text-orange-100">🔐</span>
+                            </span>
+                            Sign In
+                        </button>
+                    </div>
+
+                    <!-- Divider -->
+                    <div class="relative">
+                        <div class="absolute inset-0 flex items-center">
+                            <div class="w-full border-t border-gray-300"></div>
+                        </div>
+                        <div class="relative flex justify-center text-sm">
+                            <span class="px-2 bg-white text-gray-500">Or continue with</span>
+                        </div>
+                    </div>
+
+                    <!-- OTP Login -->
+                    <div>
+                        <button 
+                            type="button" 
+                            class="w-full flex justify-center items-center py-3 px-4 border border-gray-300 rounded-lg text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 transition-colors"
+                            onclick="showOTPLogin()"
+                        >
+                            <span class="mr-2">📱</span>
+                            Login with OTP
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Sign Up Link -->
+                <div class="mt-6 text-center">
+                    <p class="text-sm text-gray-600">
+                        Don't have an account? 
+                        <a href="#" class="font-medium text-orange-600 hover:text-orange-500" onclick="showSignUp()">
+                            Sign up here
+                        </a>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Features -->
+            <div class="bg-white rounded-xl shadow-md p-6 mt-6">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4 text-center">Why Choose StreetSmart Supply?</h3>
+                <div class="space-y-3">
+                    <div class="flex items-center space-x-3">
+                        <span class="text-green-500">✅</span>
+                        <span class="text-sm text-gray-600">Best wholesale prices for street food vendors</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <span class="text-green-500">✅</span>
+                        <span class="text-sm text-gray-600">Group buying for additional savings</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <span class="text-green-500">✅</span>
+                        <span class="text-sm text-gray-600">Fast delivery to your location</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <span class="text-green-500">✅</span>
+                        <span class="text-sm text-gray-600">Quality guaranteed products</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t mt-12">
+        <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+            <div class="text-center text-sm text-gray-500">
+                <p>&copy; 2024 StreetSmart Supply. All rights reserved.</p>
+                <div class="mt-2 space-x-4">
+                    <a href="#" class="hover:text-orange-600">Privacy Policy</a>
+                    <a href="#" class="hover:text-orange-600">Terms of Service</a>
+                    <a href="#" class="hover:text-orange-600">Support</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bottom Navigation (Mobile) -->
+    <nav class="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200">
+        <div class="flex justify-around py-2">
+            <a href="index.html" class="flex flex-col items-center py-2 px-3 text-gray-600">
+                <span class="text-lg mb-1">🏠</span>
+                <span class="text-xs">Home</span>
+            </a>
+            <a href="suppliers.html" class="flex flex-col items-center py-2 px-3 text-gray-600">
+                <span class="text-lg mb-1">🏪</span>
+                <span class="text-xs">Suppliers</span>
+            </a>
+            <a href="group-orders.html" class="flex flex-col items-center py-2 px-3 text-gray-600">
+                <span class="text-lg mb-1">👥</span>
+                <span class="text-xs">Groups</span>
+            </a>
+            <a href="#" class="flex flex-col items-center py-2 px-3 text-gray-600">
+                <span class="text-lg mb-1">📋</span>
+                <span class="text-xs">Orders</span>
+            </a>
+            <a href="login.html" class="flex flex-col items-center py-2 px-3 text-orange-600">
+                <span class="text-lg mb-1">👤</span>
+                <span class="text-xs">Login</span>
+            </a>
+        </div>
+    </nav>
+
+    <script>
+        // Toggle password visibility
+        function togglePassword() {
+            const passwordInput = document.getElementById('password');
+            const eyeIcon = document.getElementById('eyeIcon');
+            
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                eyeIcon.textContent = '🙈';
+            } else {
+                passwordInput.type = 'password';
+                eyeIcon.textContent = '👁️';
+            }
+        }
+
+        // Mobile number validation
+        document.getElementById('mobile').addEventListener('input', function(e) {
+            // Remove any non-digit characters
+            this.value = this.value.replace(/\D/g, '');
+            
+            // Limit to 10 digits
+            if (this.value.length > 10) {
+                this.value = this.value.slice(0, 10);
+            }
+        });
+
+        // Form submission
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const mobile = document.getElementById('mobile').value;
+            const password = document.getElementById('password').value;
+            
+            // Basic validation
+            if (mobile.length !== 10) {
+                alert('Please enter a valid 10-digit mobile number');
+                return;
+            }
+            
+            if (password.length < 6) {
+                alert('Password must be at least 6 characters long');
+                return;
+            }
+            
+            // Simulate login process
+            const button = document.querySelector('button[type="submit"]');
+            const originalText = button.innerHTML;
+            
+            button.innerHTML = '<span class="animate-spin mr-2">⏳</span> Signing In...';
+            button.disabled = true;
+            
+            setTimeout(() => {
+                alert('Login successful! Welcome to StreetSmart Supply.\n\nRedirecting to dashboard...');
+                // In a real app, you would redirect to the dashboard
+                window.location.href = 'index.html';
+            }, 2000);
+        });
+
+        // Show OTP login
+        function showOTPLogin() {
+            const mobile = document.getElementById('mobile').value;
+            
+            if (mobile.length !== 10) {
+                alert('Please enter your mobile number first');
+                document.getElementById('mobile').focus();
+                return;
+            }
+            
+            if (confirm(`Send OTP to +91 ${mobile}?`)) {
+                alert(`OTP sent to +91 ${mobile}\n\nPlease check your SMS and enter the 6-digit code.\n\n(Demo: Use 123456 as OTP)`);
+                
+                const otp = prompt('Enter the 6-digit OTP:');
+                if (otp === '123456') {
+                    alert('OTP verified successfully!\n\nWelcome to StreetSmart Supply.');
+                    window.location.href = 'index.html';
+                } else if (otp) {
+                    alert('Invalid OTP. Please try again.');
+                }
+            }
+        }
+
+        // Show forgot password
+        function showForgotPassword() {
+            const mobile = prompt('Enter your registered mobile number:');
+            
+            if (mobile && mobile.length === 10) {
+                alert(`Password reset link sent to +91 ${mobile}\n\nPlease check your SMS for instructions.`);
+            } else if (mobile) {
+                alert('Please enter a valid 10-digit mobile number');
+            }
+        }
+
+        // Show sign up
+        function showSignUp() {
+            alert('Sign Up\n\nThis would redirect to the registration page where new vendors can create their account with:\n\n• Business details\n• Contact information\n• Verification documents\n• Location preferences');
+        }
+
+        // Auto-focus on mobile input when page loads
+        window.addEventListener('load', function() {
+            document.getElementById('mobile').focus();
+        });
+
+        // Demo credentials hint
+        setTimeout(() => {
+            const hint = document.createElement('div');
+            hint.className = 'fixed bottom-20 md:bottom-4 right-4 bg-blue-500 text-white p-3 rounded-lg shadow-lg text-xs max-w-xs z-50';
+            hint.innerHTML = `
+                <div class="font-semibold mb-1">Demo Credentials:</div>
+                <div>Mobile: 9876543210</div>
+                <div>Password: demo123</div>
+                <button onclick="this.parentElement.remove()" class="absolute top-1 right-2 text-white hover:text-gray-200">×</button>
+            `;
+            document.body.appendChild(hint);
+            
+            // Auto-remove after 10 seconds
+            setTimeout(() => {
+                if (hint.parentElement) {
+                    hint.remove();
+                }
+            }, 10000);
+        }, 3000);
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9651100ef3f21eed',t:'MTc1MzUwMzE4OC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

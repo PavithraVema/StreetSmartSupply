@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StreetSmart Supply - Find Trusted Suppliers</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .hero-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23f97316' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <h1 class="text-2xl font-bold text-orange-600">
+                            <i class="fas fa-store mr-2"></i>StreetSmart Supply
+                        </h1>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#" class="text-orange-600 hover:text-orange-700 px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                        <a href="suppilers.html" class="text-gray-700 hover:text-orange-600 px-3 py-2 rounded-md text-sm font-medium">Suppliers</a>
+                        <a href="group -orders.html" class="text-gray-700 hover:text-orange-600 px-3 py-2 rounded-md text-sm font-medium">Group Orders</a>
+                        <a href="login.html" class="bg-orange-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-orange-700">Login</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button class="text-gray-700 hover:text-orange-600">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-pattern bg-gradient-to-r from-orange-500 to-red-500 text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                Find Trusted Suppliers for Your Street Food Business
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 opacity-90">
+                Connect with verified suppliers, get competitive prices, and join group orders to save more
+            </p>
+           
+            <!-- Search Bar -->
+            <div class="max-w-2xl mx-auto mb-8">
+                <div class="relative">
+                    <input type="text" placeholder="Search for vegetables, spices, oil..."
+                           class="w-full px-6 py-4 text-gray-800 rounded-full text-lg focus:outline-none focus:ring-4 focus:ring-orange-300">
+                    <button class="absolute right-2 top-2 bg-orange-600 text-white px-6 py-2 rounded-full hover:bg-orange-700">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+           
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="suppliers.html" class="bg-white text-orange-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition">
+                    Browse Suppliers
+                </a>
+                <a href="signup.html" class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-orange-600 transition">
+                    Join Now - Free
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Shop by Category</h2>
+                <p class="text-xl text-gray-600">Find suppliers for all your street food ingredients</p>
+            </div>
+           
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+                <div class="bg-green-50 p-6 rounded-xl text-center hover:shadow-lg transition cursor-pointer">
+                    <div class="text-4xl mb-3">🥬</div>
+                    <h3 class="font-semibold text-gray-800">Vegetables</h3>
+                    <p class="text-sm text-gray-600 mt-1">Fresh produce</p>
+                </div>
+               
+                <div class="bg-yellow-50 p-6 rounded-xl text-center hover:shadow-lg transition cursor-pointer">
+                    <div class="text-4xl mb-3">🌶️</div>
+                    <h3 class="font-semibold text-gray-800">Spices</h3>
+                    <p class="text-sm text-gray-600 mt-1">Authentic flavors</p>
+                </div>
+               
+                <div class="bg-amber-50 p-6 rounded-xl text-center hover:shadow-lg transition cursor-pointer">
+                    <div class="text-4xl mb-3">🛢️</div>
+                    <h3 class="font-semibold text-gray-800">Cooking Oil</h3>
+                    <p class="text-sm text-gray-600 mt-1">Quality oils</p>
+                </div>
+               
+                <div class="bg-red-50 p-6 rounded-xl text-center hover:shadow-lg transition cursor-pointer">
+                    <div class="text-4xl mb-3">🍅</div>
+                    <h3 class="font-semibold text-gray-800">Sauces</h3>
+                    <p class="text-sm text-gray-600 mt-1">Ready-made</p>
+                </div>
+               
+                <div class="bg-blue-50 p-6 rounded-xl text-center hover:shadow-lg transition cursor-pointer">
+                    <div class="text-4xl mb-3">🥛</div>
+                    <h3 class="font-semibold text-gray-800">Dairy</h3>
+                    <p class="text-sm text-gray-600 mt-1">Fresh daily</p>
+                </div>
+               
+                <div class="bg-purple-50 p-6 rounded-xl text-center hover:shadow-lg transition cursor-pointer">
+                    <div class="text-4xl mb-3">📦</div>
+                    <h3 class="font-semibold text-gray-800">Packaging</h3>
+                    <p class="text-sm text-gray-600 mt-1">Eco-friendly</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Why Choose StreetSmart Supply?</h2>
+            </div>
+           
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-shield-alt text-2xl text-orange-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Verified Suppliers</h3>
+                    <p class="text-gray-600">All suppliers are background-checked and verified for quality and reliability</p>
+                </div>
+               
+                <div class="text-center">
+                    <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-rupee-sign text-2xl text-green-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Best Prices</h3>
+                    <p class="text-gray-600">Compare prices from multiple suppliers and get the best deals for your business</p>
+                </div>
+               
+                <div class="text-center">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-users text-2xl text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Group Buying</h3>
+                    <p class="text-gray-600">Join with other vendors to buy in bulk and save even more money</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-orange-600 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to Grow Your Street Food Business?</h2>
+            <p class="text-xl mb-8 opacity-90">Join thousands of vendors who are already saving money and time with StreetSmart Supply</p>
+            <a href="signup.html" class="bg-white text-orange-600 px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 transition">
+                Get Started Today - It's Free!
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">
+                        <i class="fas fa-store mr-2"></i>StreetSmart Supply
+                    </h3>
+                    <p class="text-gray-400">Connecting street food vendors with trusted suppliers across India.</p>
+                </div>
+               
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="suppliers.html" class="hover:text-white">Find Suppliers</a></li>
+                        <li><a href="group-orders.html" class="hover:text-white">Group Orders</a></li>
+                        <li><a href="#" class="hover:text-white">How It Works</a></li>
+                    </ul>
+                </div>
+               
+                <div>
+                    <h4 class="font-semibold mb-4">Support</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white">Help Center</a></li>
+                        <li><a href="#" class="hover:text-white">Contact Us</a></li>
+                        <li><a href="#" class="hover:text-white">Terms of Service</a></li>
+                    </ul>
+                </div>
+               
+                <div>
+                    <h4 class="font-semibold mb-4">Contact</h4>
+                    <div class="text-gray-400 space-y-2">
+                        <p><i class="fas fa-phone mr-2"></i>+91 98765 43210</p>
+                        <p><i class="fas fa-envelope mr-2"></i>support@streetsmartsupply.com</p>
+                    </div>
+                </div>
+            </div>
+           
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 StreetSmart Supply. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple mobile menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.querySelector('.md\\:hidden button');
+            const mobileMenu = document.createElement('div');
+            mobileMenu.className = 'md:hidden bg-white shadow-lg absolute top-16 left-0 right-0 z-40 hidden';
+            mobileMenu.innerHTML = `
+                <div class="px-2 pt-2 pb-3 space-y-1">
+                    <a href="#" class="text-orange-600 block px-3 py-2 text-base font-medium">Home</a>
+                    <a href="suppliers.html" class="text-gray-700 hover:text-orange-600 block px-3 py-2 text-base font-medium">Suppliers</a>
+                    <a href="group-orders.html" class="text-gray-700 hover:text-orange-600 block px-3 py-2 text-base font-medium">Group Orders</a>
+                    <a href="login.html" class="bg-orange-600 text-white block px-3 py-2 text-base font-medium rounded-md mx-3">Login</a>
+                </div>
+            `;
+           
+            document.querySelector('nav > div').appendChild(mobileMenu);
+           
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'964c7b5b647f7fb3',t:'MTc1MzQ1NTE1NC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
+

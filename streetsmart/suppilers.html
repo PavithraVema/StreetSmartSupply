@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suppliers - StreetSmart Supply</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-sm border-b sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-orange-500 rounded-lg flex items-center justify-center">
+                        <span class="text-white font-bold text-lg">🛒</span>
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold text-gray-900">StreetSmart Supply</h1>
+                        <p class="text-xs text-gray-500">Street Food Vendors Ka Partner</p>
+                    </div>
+                </div>
+                
+                <!-- Navigation -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="home.html" class="text-gray-600 hover:text-orange-600 font-medium transition-colors">Home</a>
+                    <a href="suppilers.html" class="text-orange-600 font-medium">Suppliers</a>
+                    <a href="group -orders.html" class="text-gray-600 hover:text-orange-600 font-medium transition-colors">Group Orders</a>
+                    <a href="#" class="text-gray-600 hover:text-orange-600 font-medium transition-colors">My Orders</a>
+                </nav>
+
+                <!-- User Menu -->
+                <div class="flex items-center space-x-4">
+                    <button class="p-2 text-gray-600 hover:text-orange-600 transition-colors">
+                        <span class="text-xl">🔔</span>
+                    </button>
+                    <div class="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center">
+                        <span class="text-orange-600 font-medium text-sm">R</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Search and Filter Section -->
+    <section class="bg-white border-b py-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between space-y-4 lg:space-y-0">
+                <!-- Search Bar -->
+                <div class="flex-1 max-w-2xl">
+                    <div class="relative">
+                        <input type="text" placeholder="Search suppliers, products, or location..." 
+                               class="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500">
+                        <span class="absolute left-4 top-3.5 text-gray-400 text-lg">🔍</span>
+                    </div>
+                </div>
+
+                <!-- Filter Buttons -->
+                <div class="flex flex-wrap gap-3">
+                    <select class="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500">
+                        <option>All Categories</option>
+                        <option>Vegetables</option>
+                        <option>Spices</option>
+                        <option>Oil & Ghee</option>
+                        <option>Flour & Grains</option>
+                        <option>Packaging</option>
+                    </select>
+                    <select class="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500">
+                        <option>Distance</option>
+                        <option>Within 2 km</option>
+                        <option>Within 5 km</option>
+                        <option>Within 10 km</option>
+                    </select>
+                    <select class="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500">
+                        <option>Rating</option>
+                        <option>4+ Stars</option>
+                        <option>3+ Stars</option>
+                        <option>All Ratings</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Header -->
+    <section class="py-4 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between">
+                <p class="text-gray-600">Showing <span class="font-semibold">24 suppliers</span> near Connaught Place, Delhi</p>
+                <select class="px-3 py-1 border border-gray-300 rounded text-sm focus:ring-2 focus:ring-orange-500">
+                    <option>Sort by Distance</option>
+                    <option>Sort by Rating</option>
+                    <option>Sort by Price</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <!-- Suppliers Grid -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+            <!-- Supplier Card 1 -->
+            <div class="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+                <div class="p-6">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+                                <span class="text-green-600 font-bold text-lg">🥬</span>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-900">Sharma Vegetables</h3>
+                                <p class="text-sm text-gray-500">Fresh Produce Supplier</p>
+                            </div>
+                        </div>
+                        <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">Open</span>
+                    </div>
+
+                    <div class="space-y-2 mb-4">
+                        <div class="flex items-center text-sm text-gray-600">
+                            <span class="mr-2">📍</span>
+                            <span>1.2 km away • Karol Bagh</span>
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <span class="mr-2">⭐</span>
+                            <span>4.5 (127 reviews)</span>
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <span class="mr-2">🚚</span>
+                            <span>Free delivery above ₹500</span>
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <p class="text-sm text-gray-600 mb-2">Specializes in:</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2 py-1 bg-orange-100 text-orange-800 text-xs rounded">Onions</span>
+                            <span class="px-2 py-1 bg-orange-100 text-orange-800 text-xs rounded">Tomatoes</span>
+                            <span class="px-2 py-1 bg-orange-100 text-orange-800 text-xs rounded">Potatoes</span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded">+12 more</span>
+                        </div>
+                    </div>
+
+                    <div class="flex space-x-3">
+                        <a href="supplier-profile.html" class="flex-1 bg-orange-600 text-white text-center py-2 rounded-lg hover:bg-orange-700 transition-colors font-medium">
+                            View Profile
+                        </a>
+                        <button class="px-4 py-2 border border-orange-600 text-orange-600 rounded-lg hover:bg-orange-50 transition-colors">
+                            📞
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Supplier Card 2 -->
+            <div class="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+                <div class="p-6">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center">
+                                <span class="text-red-600 font-bold text-lg">🌶️</span>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-900">Gupta Spice House</h3>
+                                <p class="text-sm text-gray-500">Spices & Masala Supplier</p>
+                            </div>
+                        </div>
+                        <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">Open</span>
+                    </div>
+
+                    <div class="space-y-2 mb-4">
+                        <div class="flex items-center text-sm text-gray-600">
+                            <span class="mr-2">📍</span>
+                            <span>0.8 km away • Chandni Chowk</span>
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <span class="mr-2">⭐</span>
+                            <span>4.7 (89 reviews)</span>
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <span class="mr-2">🚚</span>
+                            <span>Same day delivery</span>
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <p class="text-sm text-gray-600 mb-2">Specializes in:</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2 py-1 bg-orange-100 text-orange-800 text-xs rounded">Garam Masala</span>
+                            <span class="px-2 py-1 bg-orange-100 text-orange-800 text-xs rounded">Turmeric</span>
+                            <span class="px-2 py-1 bg-orange-100 text-orange-800 text-xs rounded">Red Chili</span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded">+25 more</span>
+                        </div>
+                    </div>
+
+                    <div class="flex space-x-3">
+                        <a href="supplier-profile.html" class="flex-1 bg-orange-600 text-white text-center py-2 rounded-lg hover:bg-orange-700 transition-colors font-medium">
+                            View Profile
+                        </a>
+                        <button class="px-4 py-2 border border-orange-600 text-orange-600 rounded-lg hover:bg-orange-50 transition-colors">
+                            📞
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Supplier Card 3 -->
+            <div class="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+                <div class="p-6">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center">
+                                <span class="text-yellow-600 font-bold text-lg">🛢️</span>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-900">Delhi Oil Mart</h3>
+                                <p class="text-sm text-gray-500">Oil & Ghee Supplier</p>
+                            </div>
+                        </div>
+                        <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">Open</span>
+                    </div>
+
+                    <div class="space-y-2 mb-4">
+                        <div class="flex items-center text-sm text-gray-600">
+                            <span class="mr-2">📍</span>
+                            <span>2.1 km away • Lajpat Nagar</span>
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <span class="mr-2">⭐</span>
+                            <span>4.3 (156 reviews)</span>
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <span class="mr-2">🚚</span>
+                            <span>Bulk orders available</span>
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <p class="text-sm text-gray-600 mb-2">Specializes in:</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2 py-1 bg-orange-100 text-orange-800 text-xs rounded">Mustard Oil</span>
+                            <span class="px-2 py-1 bg-orange-100 text-orange-800 text-xs rounded">Ghee</span>
+                            <span class="px-2 py-1 bg-orange-100 text-orange-800 text-xs rounded">Sunflower Oil</span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded">+8 more</span>
+                        </div>
+                    </div>
+
+                    <div class="flex space-x-3">
+                        <a href="supplier-profile.html" class="flex-1 bg-orange-600 text-white text-center py-2 rounded-lg hover:bg-orange-700 transition-colors font-medium">
+                            View Profile
+                        </a>
+                        <button class="px-4 py-2 border border-orange-600 text-orange-600 rounded-lg hover:bg-orange-50 transition-colors">
+                            📞
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Supplier Card 4 -->
+            <div class="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+                <div class="p-6">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center">
+                                <span class="text-amber-600 font-bold text-lg">🌾</span>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-900">Agarwal Flour Mill</h3>
+                                <p class="text-sm text-gray-500">Flour & Grains Supplier</p>
+                            </div>
+                        </div>
+                        <span class="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded-full">Closes 6 PM</span>
+                    </div>
+
+                    <div class="space-y-2 mb-4">
+                        <div class="flex items-center text-sm text-gray-600">
+                            <span class="mr-2">📍</span>
+                            <span>3.5 km away • Sadar Bazaar</span>
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <span class="mr-2">⭐</span>
+                            <span>4.6 (203 reviews)</span>
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <span class="mr-2">🚚</span>
+                            <span>Fresh ground daily</span>
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <p class="text-sm text-gray-600 mb-2">Specializes in:</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2 py-1 bg-orange-100 text-orange-800 text-xs rounded">Wheat Flour</span>
+                            <span class="px-2 py-1 bg-orange-100 text-orange-800 text-xs rounded">Besan</span>
+                            <span class="px-2 py-1 bg-orange-100 text-orange-800 text-xs rounded">Rice</span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded">+15 more</span>
+                        </div>
+                    </div>
+
+                    <div class="flex space-x-3">
+                        <a href="supplier-profile.html" class="flex-1 bg-orange-600 text-white text-center py-2 rounded-lg hover:bg-orange-700 transition-colors font-medium">
+                            View Profile
+                        </a>
+                        <button class="px-4 py-2 border border-orange-600 text-orange-600 rounded-lg hover:bg-orange-50 transition-colors">
+                            📞
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Supplier Card 5 -->
+            <div class="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+                <div class="p-6">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                                <span class="text-blue-600 font-bold text-lg">📦</span>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-900">Pack-It Solutions</h3>
+                                <p class="text-sm text-gray-500">Packaging Supplier</p>
+                            </div>
+                        </div>
+                        <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">Open</span>
+                    </div>
+
+                    <div class="space-y-2 mb-4">
+                        <div class="flex items-center text-sm text-gray-600">
+                            <span class="mr-2">📍</span>
+                            <span>1.8 km away • Paharganj</span>
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <span class="mr-2">⭐</span>
+                            <span>4.4 (78 reviews)</span>
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <span class="mr-2">🚚</span>
+                            <span>Eco-friendly options</span>
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <p class="text-sm text-gray-600 mb-2">Specializes in:</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2 py-1 bg-orange-100 text-orange-800 text-xs rounded">Paper Bags</span>
+                            <span class="px-2 py-1 bg-orange-100 text-orange-800 text-xs rounded">Containers</span>
+                            <span class="px-2 py-1 bg-orange-100 text-orange-800 text-xs rounded">Napkins</span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded">+10 more</span>
+                        </div>
+                    </div>
+
+                    <div class="flex space-x-3">
+                        <a href="supplier-profile.html" class="flex-1 bg-orange-600 text-white text-center py-2 rounded-lg hover:bg-orange-700 transition-colors font-medium">
+                            View Profile
+                        </a>
+                        <button class="px-4 py-2 border border-orange-600 text-orange-600 rounded-lg hover:bg-orange-50 transition-colors">
+                            📞
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Supplier Card 6 -->
+            <div class="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+                <div class="p-6">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center">
+                                <span class="text-purple-600 font-bold text-lg">🥛</span>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-900">Fresh Dairy Hub</h3>
+                                <p class="text-sm text-gray-500">Dairy Products Supplier</p>
+                            </div>
+                        </div>
+                        <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">Open</span>
+                    </div>
+
+                    <div class="space-y-2 mb-4">
+                        <div class="flex items-center text-sm text-gray-600">
+                            <span class="mr-2">📍</span>
+                            <span>2.7 km away • Rajouri Garden</span>
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <span class="mr-2">⭐</span>
+                            <span>4.8 (142 reviews)</span>
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <span class="mr-2">🚚</span>
+                            <span>Cold chain delivery</span>
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <p class="text-sm text-gray-600 mb-2">Specializes in:</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2 py-1 bg-orange-100 text-orange-800 text-xs rounded">Milk</span>
+                            <span class="px-2 py-1 bg-orange-100 text-orange-800 text-xs rounded">Paneer</span>
+                            <span class="px-2 py-1 bg-orange-100 text-orange-800 text-xs rounded">Curd</span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded">+6 more</span>
+                        </div>
+                    </div>
+
+                    <div class="flex space-x-3">
+                        <a href="supplier-profile.html" class="flex-1 bg-orange-600 text-white text-center py-2 rounded-lg hover:bg-orange-700 transition-colors font-medium">
+                            View Profile
+                        </a>
+                        <button class="px-4 py-2 border border-orange-600 text-orange-600 rounded-lg hover:bg-orange-50 transition-colors">
+                            📞
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Load More Button -->
+        <div class="text-center mt-12">
+            <button class="bg-white border border-gray-300 text-gray-700 px-8 py-3 rounded-lg hover:bg-gray-50 transition-colors font-medium">
+                Load More Suppliers
+            </button>
+        </div>
+    </main>
+
+    <!-- Bottom Navigation (Mobile) -->
+    <nav class="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200">
+        <div class="flex justify-around py-2">
+            <a href="index.html" class="flex flex-col items-center py-2 px-3 text-gray-600">
+                <span class="text-lg mb-1">🏠</span>
+                <span class="text-xs">Home</span>
+            </a>
+            <a href="suppliers.html" class="flex flex-col items-center py-2 px-3 text-orange-600">
+                <span class="text-lg mb-1">🏪</span>
+                <span class="text-xs">Suppliers</span>
+            </a>
+            <a href="group-orders.html" class="flex flex-col items-center py-2 px-3 text-gray-600">
+                <span class="text-lg mb-1">👥</span>
+                <span class="text-xs">Groups</span>
+            </a>
+            <a href="#" class="flex flex-col items-center py-2 px-3 text-gray-600">
+                <span class="text-lg mb-1">📋</span>
+                <span class="text-xs">Orders</span>
+            </a>
+            <a href="#" class="flex flex-col items-center py-2 px-3 text-gray-600">
+                <span class="text-lg mb-1">👤</span>
+                <span class="text-xs">Profile</span>
+            </a>
+        </div>
+    </nav>
+
+    <script>
+        // Search functionality
+        document.querySelector('input[type="text"]').addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase();
+            const supplierCards = document.querySelectorAll('.bg-white.rounded-xl');
+            
+            supplierCards.forEach(card => {
+                const supplierName = card.querySelector('h3').textContent.toLowerCase();
+                const specialties = Array.from(card.querySelectorAll('.bg-orange-100')).map(span => span.textContent.toLowerCase());
+                
+                if (supplierName.includes(searchTerm) || specialties.some(specialty => specialty.includes(searchTerm))) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+
+        // Filter functionality
+        document.querySelectorAll('select').forEach(select => {
+            select.addEventListener('change', function() {
+                // This would typically filter the suppliers based on the selected criteria
+                console.log('Filter changed:', this.value);
+            });
+        });
+
+        // Call button functionality
+        document.querySelectorAll('button').forEach(button => {
+            if (button.textContent.includes('📞')) {
+                button.addEventListener('click', function() {
+                    const supplierName = this.closest('.bg-white').querySelector('h3').textContent;
+                    alert(`Calling ${supplierName}...\n\nThis would typically initiate a phone call or show contact options.`);
+                });
+            } else if (button.textContent.includes('Load More')) {
+                button.addEventListener('click', function() {
+                    alert('Loading more suppliers...\n\nThis would typically load additional supplier cards.');
+                });
+            }
+        });
+
+        // Add hover effects for supplier cards
+        document.querySelectorAll('.bg-white.rounded-xl').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-2px)';
+                this.style.transition = 'transform 0.2s ease';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9650f95106ecd85a',t:'MTc1MzUwMjI1Ny4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
